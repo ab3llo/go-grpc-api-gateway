@@ -12,7 +12,7 @@ func FindOne(ctx *gin.Context, c pb.ProductServiceClient) {
 	id, _ := ctx.Params.Get("id")
 
 	res, err := c.FindOne(context.Background(), &pb.FindOneRequest{
-		ProductId: id,
+		Id: id,
 	})
 
 	if err != nil {
